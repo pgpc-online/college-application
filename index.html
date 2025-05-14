@@ -11,7 +11,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
@@ -26,6 +25,10 @@
       justify-content: space-between;
       align-items: center;
       height: 70px;
+      position: fixed;
+      width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
     }
 
    /* .logo img {
@@ -42,7 +45,6 @@
     .navbar {
       display: flex;
       align-items: center;
-      height: ;
     }
 
     .nav-contents {
@@ -110,9 +112,12 @@
     .banner {
       background: url('https://i.postimg.cc/7Z07h93H/images.jpg') center/cover no-repeat;
       padding: 6rem 2rem;
+      padding-top: 144px;
       text-align: center;
       color: white;
       position: relative;
+      margin-top: 70px;
+      
     }
 
     .banner::before {
@@ -193,7 +198,9 @@
     .faqs h3 {
       margin-bottom: 0.5rem;
     }
-
+#apply{
+  background: #f0f0f0;
+}
     footer {
       background: #003366;
       color: white;
@@ -259,7 +266,9 @@
     <div class="feature">Experienced Faculty</div>
   </div>
 </section>
+
 <hr>
+
 <section class="section" id="apply">
   <h2>How to Apply</h2>
   <ul class="timeline">
@@ -293,9 +302,9 @@
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <p>Email: padregarciapolytechniccollege@gmail.com</p>
-  <p>Phone: (043) 233-2025</p>
-  <p>Visit us on Facebook: Padre Garcia Polytechnic College - PGPC</p>
+  <p><strong>Email:</strong> padregarciapolytechniccollege@gmail.com</p>
+  <p><strong>Phone:</strong> (043) 233-2025</p>
+  <p><strong>Facebook:</strong> Padre Garcia Polytechnic College - PGPC</p>
 </section>
 
 <footer>
