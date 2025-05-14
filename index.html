@@ -5,11 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PGPC Online Application</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
     * {
       margin: 0;
       padding: 0;
@@ -17,7 +14,7 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
     }
 /*HEADEERRRRRRRRRR*/
@@ -31,8 +28,8 @@
     }
 
     .logo img {
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
     }
 /*NAVIGATIOOOOOOOONONNONNNNNNN*/
     .navbar {
@@ -61,7 +58,7 @@
 
     .menu-toggle {
       display: none;
-      font-size: 28px;
+      font-size: 30px;
       cursor: pointer;
       color: #fff;
       background: none;
@@ -84,14 +81,13 @@
         position: absolute;
         top: 70px;
         right: 0;
-
-
         background: rgba(0, 0, 0, 0.95);
         width: 100%;
         text-align: center;
         padding: 1rem 0;
         z-index: 1000;
       }
+
       .nav-contents.show {
         display: flex;
       }
@@ -221,13 +217,13 @@
   <div class="banner-content">
     <h1>Your Future Starts Here</h1>
     <p>Apply online to Padre Garcia Polytechnic College today.</p>
-    <button class="start">Start Application</button>
+    <button class="start" onclick="location.href='form1.html'">Start Application</button>
     <button class="cta-button" onclick="location.href='#courses'">View Courses</button>
   </div>
 </section>
 <section class="section" id="about">
   <h2>About PGPC</h2>
-  <p><strong>Padre Garcia Polytechnic College (PGPC)</strong> is a premiere higher learning institution located in  Padre Garcia, Batangas. It is committed to providing quality and accessible education to every young Garciano who dreams of a better future. More than just a school, PGPC is the result of the deep and genuine desire of Hon. Mike Rivera to give the youth of Padre Garcia the opportunity to study in an affordable, reliable, and high-quality college within their own hometown.</p>
+  <p><strong>Padre Garcia Polytechnic College (PGPC)</strong> is a premiere higher learning institution located in Padre Garcia, Batangas. It is committed to providing quality and accessible education to every young Garciano who dreams of a better future. More than just a school, PGPC is the result of the deep and genuine desire of Hon. Mike Rivera to give the youth of Padre Garcia the opportunity to study in an affordable, reliable, and high-quality college within their own hometown.</p>
   <br>
   <br>
   <h2>Why choose PGPC?</h2>
@@ -278,11 +274,12 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Padre Garcia Polytechnic College |
-    <a href="#">Privacy Policy</a> |
+  <p>&copy; 2025 Padre Garcia Polytechnic College | 
+    <a href="#">Privacy Policy</a> | 
     <a href="#">Terms of Service</a>
   </p>
 </footer>
+
 
 <script>
   const menuToggle = document.getElementById('menu-toggle');
