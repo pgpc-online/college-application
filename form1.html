@@ -1,5 +1,4 @@
 
-<!-- form1.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Personal Information</title>
   <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f2f2f2;
       margin: 0;
-      padding: 20px;
+      padding: 0px;
+      font-size: 16px;
     }
+    /*NAVIGATIONNNNN BARRRRRR*/
     .nav1{
      background: #003366;
      padding-bottom: 10px;
      padding-left: 10px;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     height: 70px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     .nav1 a{
       font-weight: bold;
@@ -57,37 +68,61 @@
       font-size: 14px;
     }
 
-    button {
-      margin-top: 25px;
-      padding: 12px;
-      width: 100%;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
+    .buttonContainer {
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  margin-top: 25px;
+}
+button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: auto;
+}
+button:hover {
+  background: #0056b3;
+}
 
     @media (max-width: 600px) {
       .container {
         padding: 20px;
       }
     }
+    .container{
+      margin-top: 120px;
+      width: 100%;
+      max-width: 700px;
+    }
+    /* p under header*/
+    p{
+      margin: 20px;
+      margin-top: 120px;
+      line-height: 1.3;
+      text-align: justify;
+    }
   </style>
 </head>
+
+
 <body>
   <header>
     <div class="nav1"><a href="javascript:history.back()">&#8592</a></div>
   </header>
-  <hr>
+<p>This student profiling survey is designed to collect additional information from all applicants this 1st semester of A.Y. 2025-2026
+
+    The information of the student or applicant will be used by the Admission and Testing Office to analyze the admission trends this coming 1st semester of A.Y. 2025-2026.
+    <br>
+    Padre Garcia Polytechnic College(PGPC) committed to protecting the privacy rights of individual's personal and sensitive information pursuant to the provisions of <span style="font-weight: bold;">Republic Act No. 10173</span>, or the  <span style="font-weight: bold;">Data Privacy Act of 2012</span>, its Implementing Rules and Regulations(IRR). Likewise, PGPC may share such information to affiliated or partner organizations as part of its contractual obligations, or with government agencies pursuant to law or legal processes.
+  </p>
+  
   <div class="container">
     <h3>Student Information</h3>
+    
     <form>
       
       <label for="studentCourse">Program (Course):</label>
@@ -140,11 +175,10 @@
 
       <label for="studentPostal">Postal Code:</label>
       <input type="text" name="studentPostal" id="studentPostal" pattern="[0-9]{4,6}" required>
-
-      <button type="submit">Next</button>
+<div class="buttonContainer">
+      <button type="submit" onclick="location.href="#">Next</button>
+      </div>
     </form>
   </div>
 </body>
 </html>
-
-Show quoted text
