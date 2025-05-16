@@ -29,6 +29,7 @@
       width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 9999;
+      user-select: none;
     }
 
    /* .logo img {
@@ -117,7 +118,7 @@
       color: white;
       position: relative;
       margin-top: 70px;
-      
+      user-select: none;
     }
 
     .banner::before {
@@ -158,6 +159,10 @@
       padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
+    }
+    .section::selection {
+      background: #003366;
+      color: #fff;
     }
 
     .section h2 {
