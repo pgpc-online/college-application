@@ -102,15 +102,13 @@ button:hover {
     }
   .subText{margin-top: 20px; margin-bottom: 20px;}
     .back-arrow {
-  width: 24px;      /* Adjust size */
-  height: auto;     /* Keep aspect ratio */
-  cursor: pointer;  /* Change cursor on hover */
-  transition: transform 0.2s ease;
+  .back-arrow {
+  width: 50px;
+  height: auto;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.back-arrow:hover {
-  transform: scale(1.1);  /* Slight zoom effect on hover */
-}
   </style>
 </head>
 
@@ -119,7 +117,7 @@ button:hover {
   <header>
     <div class="nav1">
   <a href="javascript:history.back()">
-    <img src="images/back.png" alt="Back" class="back-arrow">
+    <img src="back.png" alt="Back" class="back-arrow">
   </a>
 </div>
   </header>
