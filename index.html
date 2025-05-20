@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
   <title>PGPC Online Application</title>
+  
   <style>
     * {
       margin: 0;
@@ -12,7 +14,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'IBM Plex Sans', sans-serif;
       line-height: 1.6;
     }
 /*HEADEERRRRRRRRRR*/
@@ -31,17 +33,6 @@
       z-index: 9999;
       user-select: none;
     }
-
-   /* .logo img {
-      width: 45px;
-      height: 45px;
-      margin-top: 10px;
-    }
-    .logo p{
-      font-weight: bold;
-
-    }
-    */
 /*NAVIGATIOOOOOOOONONNONNNNNNN*/
     .navbar {
       display: flex;
@@ -64,7 +55,8 @@
     }
 
     .nav-contents li a:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: #f5faff;
+      color: #d4af37;
     }
 
     .menu-toggle {
@@ -92,9 +84,7 @@
         position: absolute;
         top: 70px;
         right: 0;
-
-
-        background: rgba(0, 0, 0, 0.95);
+        background:#002444;
         width: 100%;
         text-align: center;
         padding: 1rem 0;
@@ -119,6 +109,7 @@
       position: relative;
       margin-top: 70px;
       user-select: none;
+      height: 650px;
     }
 
     .banner::before {
@@ -167,7 +158,7 @@
 
     .section h2 {
       margin-bottom: 1rem;
-      color: #003366;
+      color: #d4af37;
       text-align: center;
     }
 
@@ -194,18 +185,20 @@
       margin-bottom: 1rem;
     }
 
-    .faq {
-      background: #f0f0f0;
+        #faqs {
+      background: #f5faff;
       padding: 2rem;
       border-radius: 8px;
+      color:#003366;
     }
 
-    .faqs h3 {
+    #faqs h3 {
       margin-bottom: 0.5rem;
+    
     }
-#apply{
-  background: #f0f0f0;
-}
+    #apply{
+       background: #f5faff;
+     }
     footer {
       background: #003366;
       color: white;
@@ -260,7 +253,7 @@
 </section>
 <section class="section" id="about">
   <h2>About PGPC</h2>
-  <p><strong>Padre Garcia Polytechnic College (PGPC)</strong> is a premiere higher learning institution located in  Padre Garcia, Batangas. It is committed to providing quality and accessible education to every young Garciano who dreams of a better future. More than just a school, PGPC is the result of the deep and genuine desire of Hon. Mike Rivera to give the youth of Padre Garcia the opportunity to study in an affordable, reliable, and high-quality college within their own hometown.</p>
+  <p style="color:#003366;"><strong>Padre Garcia Polytechnic College (PGPC)</strong> is a premiere higher learning institution located in  Padre Garcia, Batangas. It is committed to providing quality and accessible education to every young Garciano who dreams of a better future. More than just a school, PGPC is the result of the deep and genuine desire of Hon. Mike Rivera to give the youth of Padre Garcia the opportunity to study in an affordable, reliable, and high-quality college within their own hometown.</p>
   <br>
   <br>
   <h2>Why choose PGPC?</h2>
@@ -296,7 +289,7 @@
 </section>
 
 <section class="section faq" id="faqs">
-  <h2>Frequently Asked Questions</h2>
+  <h2 style="color: #d4af37;">Frequently Asked Questions</h2>
   <h3>Do I need to create an account?</h3>
   <p>No. You can start your application right away by clicking "Start Application" button and filling out the form.</p>
   <h3>What are the requirements?</h3>
@@ -309,10 +302,19 @@
   <h2>Contact Us</h2>
   <p><strong>Email:</strong> padregarciapolytechniccollege@gmail.com</p>
   <p><strong>Phone:</strong> (043) 233-2025</p>
-  <p><strong>Facebook:</strong> Padre Garcia Polytechnic College - PGPC</p>
+    <p><strong>Facebook:</strong></p>
+  <a href="https://m.facebook.com/PadreGarciaPolytechnicCollege/" target="_blank">
+  Visit Padre Garcia Polytechnic College on Facebook
+</a>
+  <br>
+  <p><strong>Map:</strong></p>
+<a href="https://www.google.com/maps/place/V7M8%2B4JC+Padre+Garcia+Polytechnic+College,+Padre+Garcia,+Batangas/@13.8828094,121.2665155,17z" target="_blank">
+    View Padre Garcia Polytechnic College on Google Maps
+</a>
 </section>
 
 <footer>
+  <h4 style="margin-bottom: 20px;">"TAGA PGPC AKO: MATALINO, DISIPLINADO, MABUTING TAO, IPINAGMAMALAKI KO"</h4>
   <p>&copy; 2025 Padre Garcia Polytechnic College |
     <a href="#">Privacy Policy</a> |
     <a href="#">Terms of Service</a>
