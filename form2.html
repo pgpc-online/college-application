@@ -1,113 +1,169 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Personal Information</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Application Form Part 2</title>
   <style>
-      * {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'IBM Plex Sans', sans-serif;
       background: #f2f2f2;
-      margin: 0;
-      padding: 0px;
       font-size: 16px;
     }
-
-  
     .container {
       background: #fff;
       padding: 30px;
-      max-width: 500px;
-      margin: auto;
+      max-width: 700px;
+      margin: 20px auto;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
     h3 {
-      margin-top: 0;
+      margin-bottom: 20px;
       color: #333;
-      
     }
-
     label {
       margin-top: 15px;
       display: block;
       font-weight: bold;
       color: #555;
     }
-
-    input, select {
+    input[type="text"],
+    input[type="tel"],
+    select {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
+      margin-bottom: 5px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      box-sizing: border-box;
       font-size: 14px;
     }
-
+    .radio-group {
+      margin-top: 10px;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .radio-group input[type="radio"] {
+      margin-right: 10px;
+    }
     .buttonContainer {
-  display: flex;
-  justify-content: flex-end; /* Aligns button to the right */
-  margin-top: 25px;
-}
-button {
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-  width: auto;
-}
-button:hover {
-  background: #0056b3;
-}
-
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 25px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
     @media (max-width: 600px) {
       .container {
         padding: 20px;
       }
     }
-    .container{
-      margin-top: 10px;
-      width: 100%;
-      max-width: 700px;
-    }
-  .subText{margin-top: 20px; margin-bottom: 20px;}
+
   </style>
 </head>
-
-
 <body>
-  
   <div class="container">
     <h3>II. FAMILY BACKGROUND</h3>
-    
-    <form>
-
-
+    <form action="consent.html">
       <label for="fatherName">Father's Name:</label>
-      <input type="text" name="fatherName" id="fatherName" required>
+      <input type="text" name="fatherName" id="fatherName" required />
 
-      <label for="fatherOccupation">Father's Occupation: </label>
-      <input type="text" name="fatherOccupation" id="fatherOccupation" required>
+      <label for="fatherOccupation">Occupation:</label>
+      <input type="text" name="fatherOccupation" id="fatherOccupation" required />
 
-      <label for="fatherNumber">Contact No./s: </label>
-      <input type="tel" name="fatherNumbe" id="fatherNumber" pattern="[0-9]{10,15}" required>
+      <label for="fatherNumber">Contact No./s:</label>
+      <input type="tel" name="fatherNumber" id="fatherNumber" pattern="[0-9]{10,15}" required />
 
+      <label for="motherName">Mother's Maiden Name:</label>
+      <input type="text" name="motherName" id="motherName" required />
+
+      <label for="motherOccupation">Occupation:</label>
+      <input type="text" name="motherOccupation" id="motherOccupation" required />
+
+      <label for="motherNumber">Contact No./s:</label>
+      <input type="tel" name="motherNumber" id="motherNumber" pattern="[0-9]{10,15}" required />
+
+      <label for="guardianName">Guardian's Name:</label>
+      <input type="text" name="guardianName" id="guardianName" required />
+
+      <label for="guardianOccupation">Guardian's Occupation:</label>
+      <input type="text" name="guardianOccupation" id="guardianOccupation" required />
+
+      <label for="guardianNumber">Contact No./s:</label>
+      <input type="tel" name="guardianNumber" id="guardianNumber" pattern="[0-9]{10,15}" required />
+
+      <label>Average Family Income:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="familyIncome" value="below10k" required /> 10,000 and below</label>
+        <label><input type="radio" name="familyIncome" value="10kto20k" /> 10,001 - 20,000</label>
+        <label><input type="radio" name="familyIncome" value="20kto30k" /> 20,001 - 30,000</label>
+        <label><input type="radio" name="familyIncome" value="above30k" /> Above 30,000</label>
+      </div>
+
+<div class="newDiv" style="margin-top: 80px;">
+  
+  <h3 style="margin-bottom: 20px;">III. EDUCATIONAL BACKGROUND</h3>
+  
+        <label for="strand">Senior High School strand:</label>
+      <input type="text" name="strand" id="strand" required />
       
-<div class="buttonContainer">
-  <button onclick="javascript:history.back()">Back</button>
-      <button type="submit" onclick="location.href="form2.html">Next</button>
+       <label for="sname">SHS name:</label>
+      <input type="text" name="sname" id="sname" required />
+      
+      <label for="saddress">Address <i>(Brgy. City, Town)</i>:</label>
+      <input type="text" name="saddress" id="saddress" required />
+      
+     <label for="inclusiveDates">Inclusive Dates:</label>
+    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 30px;">
+  <input type="date" name="startDate" id="startDate" style="height: 35px;" required>
+  <span> – </span>
+  <input type="date" name="endDate" id="endDate" style="height: 35px;" required>
+  </div>
+  <hr>
+  <div class="College" style="margin-top: 50px;">
+  <label for="college">College(if any)/ALS GRADUATE:</label>
+  <p>Type N/A if </p>
+      <input type="text" name="college" id="college" required />
+      
+       <label for="cname">School name:</label>
+      <input type="text" name="cname" id="cname" required />
+      
+      <label for="caddress">Address <i>(Brgy. City, Town)</i>:</label>
+      <input type="text" name="caddress" id="caddress" required />
+      
+     <label for="cinclusiveDates">School Year:</label>
+    <div style="display: flex; gap: 10px; align-items: center;">
+  <input type="number" name="cstartDate" id="cstartDate" min="1900" max="2099" style="height: 35px;" required>
+  <span> – </span>
+  <input type="number" name="cendDate" id="cendDate" min="1900" max="2099" style="height: 35px;" required>
+  </div>
+  
+</div>
+      <div class="buttonContainer">
+        <button type="button" onclick="history.back()">Back</button>
+        <button type="submit" formaction="form2.html">Next</button>
       </div>
     </form>
   </div>
