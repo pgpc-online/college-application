@@ -29,7 +29,7 @@
       height: 70px;
       position: fixed;
       width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 9999;
       user-select: none;
     }
@@ -104,12 +104,13 @@
       background: url('images/bg.jpg') center/cover no-repeat;
       padding: 6rem 2rem;
       padding-top: 144px;
-      text-align: center;
+      text-align: left;
       color: white;
       position: relative;
       margin-top: 70px;
       user-select: none;
       height: 650px;
+      align-items: left;
     }
 
     .banner::before {
@@ -126,13 +127,17 @@
     }
 
     .banner h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 48px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      line-height: 1.1;
+      
     }
 
     .banner p {
       font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 150px;
     }
 
     .cta-button, .start {
@@ -185,7 +190,7 @@
       margin-bottom: 1rem;
     }
 
-        #faqs {
+     /*   #faqs {
       background: #f5faff;
       padding: 2rem;
       border-radius: 8px;
@@ -195,7 +200,7 @@
     #faqs h3 {
       margin-bottom: 0.5rem;
     
-    }
+    }*/
     #apply{
        background: #f5faff;
      }
@@ -220,6 +225,9 @@
     }.logobox img{
       height: 50px; margin-right: 10px;
     }
+    a{
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -234,10 +242,10 @@
   <nav class="navbar">
     <button class="menu-toggle" id="menu-toggle"></button>
     <ul class="nav-contents" id="nav-contents">
-      <li><a href="#about">Home</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#courses">Courses Offered</a></li>
+      <li><a href="#apply">How to apply</a></li>
       <li><a href="#contact">Contact Us</a></li>
-      <li><a href="#faqs">FAQs</a></li>
     </ul>
   </nav>
 </header>
@@ -266,19 +274,8 @@
 </section>
 
 <hr>
-
-<section class="section" id="apply">
-  <h2>How to Apply</h2>
-  <ul class="timeline">
-    <li>1. Click "Start Application".</li>
-    <li>2. Fill Out Application Form.</li>
-    <li>3. Upload Required Documents</li>
-    <li>4. Wait for Confirmation</li>
-    <li>5. Proceed to Enrollment</li>
-  </ul>
-</section>
-
-<section class="section" id="courses">
+  
+  <section class="section" id="courses">
   <h2>Courses Offered</h2>
   <div class="courses">
     <div class="course">BS Computer Science</div>
@@ -286,9 +283,22 @@
     <div class="course">BS Public Administration</div>
     <div class="course">BS Criminology</div>
   </div>
+  </section>
+  
+
+<section class="section" id="apply">
+  <h2>How to Apply</h2>
+  <ul class="timeline">
+    <li>1. Click <a href="form1.html">Start Application".</a></li>
+    <li>2. Fill Out Application Form.</li>
+    <li>3. Upload Required Documents</li>
+    <li>4. Wait for Confirmation</li>
+    <li>5. Proceed to Enrollment</li>
+  </ul>
 </section>
 
-<section class="section faq" id="faqs">
+
+<!--<section class="section faq" id="faqs">
   <h2 style="color: #d4af37;">Frequently Asked Questions</h2>
   <h3>Do I need to create an account?</h3>
   <p>No. You can start your application right away by clicking "Start Application" button and filling out the form.</p>
@@ -296,13 +306,17 @@
   <p>Form 138, PSA Birth Certificate, Good Moral, and 2x2 picture.</p>
   <h3>How much is the tuition?</h3>
   <p>PGPC offers affordable and flexible tuition payment options.</p>
-</section>
+</section>-->
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <p><strong>Email:</strong> padregarciapolytechniccollege@gmail.com</p>
-  <p><strong>Phone:</strong> (043) 233-2025</p>
-    <p><strong>Facebook:</strong></p>
+  <p><strong>Email:</strong></p>
+  
+  <a href="mailto:padregarciapolytechniccollege@gmail.com">padregarciapolytechniccollege@gmail.com</a>
+  
+  <p><strong>Phone:</strong></p>
+  <a href="tel:(043) 233-2025">(043) 233-2025</a>
+  <p><strong>Facebook:</strong></p>
   <a href="https://m.facebook.com/PadreGarciaPolytechnicCollege/" target="_blank">
   Visit Padre Garcia Polytechnic College on Facebook
 </a>
