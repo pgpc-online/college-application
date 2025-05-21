@@ -141,16 +141,16 @@
   <span> – </span>
   <input type="date" name="endDate" id="endDate" style="height: 35px;" required>
   </div>-->
-    <div style="display: flex; gap: 10px; align-items: center;">
+ <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
   <input type="number" name="startDate" id="startDate" min="1900" max="2099" style="height: 35px;" required>
   <span> – </span>
   <input type="number" name="endDate" id="endDate" min="1900" max="2099" style="height: 35px;" required>
-  
-  <hr>
+  </div>
+<hr>
       
   <div class="College" style="margin-top: 50px;">
   <label for="college">College(if any)/ALS GRADUATE:</label>
-  <p>Type N/A if </p>
+  <i style="font-size: 15px;">*Leave blank if not applicable </i>
       <input type="text" name="college" id="college" />
       
        <label for="cname">School name:</label>
@@ -158,23 +158,23 @@
       
       <label for="caddress">Address <i>(Brgy. City, Town)</i>:</label>
       <input type="text" name="caddress" id="caddress" />
-      
-     <label for="cinclusiveDates">School Year:</label>
-    <div style="display: flex; gap: 10px; align-items: center;">
-  <input type="number" name="cstartDate" id="cstartDate" min="1900" max="2099" style="height: 35px;" required>
+      <label for="cinclusiveDates">School Year:</label>
+   <div style="display: flex; gap: 10px; align-items: center;">
+  <input type="number" name="cstartDate" id="cstartDate" min="1900" max="2099" style="height: 35px;">
   <span> – </span>
-  <input type="number" name="cendDate" id="cendDate" min="1900" max="2099" style="height: 35px;" required>
+  <input type="number" name="cendDate" id="cendDate" min="1900" max="2099" style="height: 35px;">
+      </div>
  <label for="cprogram">Program</label>
-      <input type="text" name="cprogram" id="cprogram" />
-    </div>
+<input type="text" name="cprogram" id="cprogram" />
+
     <hr>
     <label>Member of Cultural Minority Group?</label>
-  <div class="radio-group1">
+  <div class="radio-group">
         <label><input type="radio" name="member" value="yes" required /> Yes</label>
         <label><input type="radio" name="member" value="no" /> No</label>
   </div>
     <label>Do you have any physical disability or condition that requires special attention?</label>
-  <div class="radio-group2">
+  <div class="radio-group">
         <label><input type="radio" name="special" value="yes" required /> Yes</label>
         <label><input type="radio" name="special" value="no" /> No</label>
   </div>
