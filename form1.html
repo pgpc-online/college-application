@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
   <title>Student Personal Information</title>
   <style>
       * {
@@ -12,7 +13,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'IBM Plex Sans', sans-serif;
       background: #f2f2f2;
       margin: 0;
       padding: 0px;
@@ -101,13 +102,16 @@ button:hover {
       text-align: justify;
     }
   .subText{margin-top: 20px; margin-bottom: 20px;}
+  
   .back-arrow {
   width: 50px;
   height: auto;
   margin-top: 10px;
   cursor: pointer;
 }
-
+.sub{
+  font-size: 13px;
+}
   </style>
 </head>
 
@@ -116,7 +120,7 @@ button:hover {
   <header>
     <div class="nav1">
   <a href="javascript:history.back()">
-    <img src="images/back.png" alt="Back" class="back-arrow">
+    <img src="templates/back.png" alt="Back" class="back-arrow">
   </a>
 </div>
   </header>
@@ -144,6 +148,7 @@ button:hover {
       </select>
 
       <label for="studentName">Full Name:</label>
+      <p class="sub"><i>LAST NAME, FIRST NAME MIDDLE NAME</i></p>
       <input type="text" name="studentName" id="studentName" required>
 
       <label for="studentDate">Date of Birth:</label>
@@ -183,7 +188,7 @@ button:hover {
       <input type="text" name="studentAddress" id="studentAddress" required>
 
       <label for="studentPostal">Postal Code:</label>
-      <input type="text" name="studentPostal" id="studentPostal" pattern="[0-9]{4,6}" required>
+      <input type="tel" name="studentPostal" id="studentPostal" pattern="[0-9]{4,6}" required>
 <div class="buttonContainer">
       <button type="submit">Next</button>
       </div>
