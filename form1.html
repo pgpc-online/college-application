@@ -142,7 +142,7 @@ PGPC values your privacy and ensures that all personal and sensitive information
     <p><strong>TO THE APPLICANT</strong></p><br>
     <p><strong>PRINT</strong> legibly all information required. Only correctly and completely filled-out form will be accepted for processing</p>
     </div>
-    <form action="form2.html">
+    <form onsubmit="saveData()" action="form2.html">
       <label for="studentCourse">Program (Course):</label>
       <select name="studentCourse" id="studentCourse" required>
         <option value="" disabled selected>Select Course</option>
@@ -199,5 +199,14 @@ PGPC values your privacy and ensures that all personal and sensitive information
       </div>
     </form>
   </div>
+  <script>
+  function saveData() {
+      const name = document.getElementById('studentName').value;
+     /* const age = document.getElementById('studentAge').value;
+*/
+      localStorage.setItem('studentName', name);
+     /* localStorage.setItem('studentAge', age);*/
+    }
+  </script>
 </body>
 </html>
