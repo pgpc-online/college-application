@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Requirements</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #aaa;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input[type="file"] {
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Requirements</h2>
+    <form id="uploadForm">
+      <label>2x2 Photo:</label>
+      <input type="file" accept="image/*" required>
+
+      <label>PSA Birth Certificate:</label>
+      <input type="file" accept="image/*,.pdf" required>
+
+      <label>Good Moral (optional):</label>
+      <input type="file" accept="image/*,.pdf">
+
+      <button type="submit">Submit Requirements</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Simulated upload successful! Redirecting...");
+      window.location.href = "done.html";
+    });
+  </script>
+</body>
+</html>
