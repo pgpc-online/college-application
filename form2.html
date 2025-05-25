@@ -86,7 +86,7 @@
 <body>
   <div class="container">
     <h3>II. FAMILY BACKGROUND</h3>
-    <form action="consent.html">
+    <form id="form2" action="consent.html" onsubmit="saveForm2Data(event)">
       <label for="fatherName">Father's Name:</label>
       <input type="text" name="fatherName" id="fatherName" required />
 
@@ -184,6 +184,48 @@
         <button type="submit" formaction="consent.html">Next</button>
       </div>
     </form>
+    <script>
+function saveForm2Data(event) {
+  event.preventDefault(); // Prevent auto-submit
+
+  localStorage.setItem('fatherName', document.getElementById('fatherName').value);
+  localStorage.setItem('fatherOccupation', document.getElementById('fatherOccupation').value);
+  localStorage.setItem('fatherNumber', document.getElementById('fatherNumber').value);
+
+  localStorage.setItem('motherName', document.getElementById('motherName').value);
+  localStorage.setItem('motherOccupation', document.getElementById('motherOccupation').value);
+  localStorage.setItem('motherNumber', document.getElementById('motherNumber').value);
+
+  localStorage.setItem('guardianName', document.getElementById('guardianName').value);
+  localStorage.setItem('guardianOccupation', document.getElementById('guardianOccupation').value);
+  localStorage.setItem('guardianNumber', document.getElementById('guardianNumber').value);
+
+  const income = document.querySelector('input[name="familyIncome"]:checked');
+  localStorage.setItem('familyIncome', income ? income.value : '');
+
+  localStorage.setItem('strand', document.getElementById('strand').value);
+  localStorage.setItem('sname', document.getElementById('sname').value);
+  localStorage.setItem('saddress', document.getElementById('saddress').value);
+  localStorage.setItem('startDate', document.getElementById('startDate').value);
+  localStorage.setItem('endDate', document.getElementById('endDate').value);
+
+  localStorage.setItem('college', document.getElementById('college').value);
+  localStorage.setItem('cname', document.getElementById('cname').value);
+  localStorage.setItem('caddress', document.getElementById('caddress').value);
+  localStorage.setItem('cstartDate', document.getElementById('cstartDate').value);
+  localStorage.setItem('cendDate', document.getElementById('cendDate').value);
+  localStorage.setItem('cprogram', document.getElementById('cprogram').value);
+
+  const member = document.querySelector('input[name="member"]:checked');
+  localStorage.setItem('member', member ? member.value : '');
+
+  const special = document.querySelector('input[name="special"]:checked');
+  localStorage.setItem('special', special ? special.value : '');
+
+  // Submit after saving
+  document.getElementById("form2").submit();
+}
+    </script>
   </div>
 </body>
 </html>
