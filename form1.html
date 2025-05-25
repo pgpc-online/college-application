@@ -154,10 +154,14 @@ PGPC values your privacy and ensures that all personal and sensitive information
         <option>BS Management Accountancy</option>
       </select>
 
-      <label for="studentName">Full Name:</label>
-      <p class="sub"><i>LAST NAME, FIRST NAME MIDDLE NAME</i></p>
-      <input type="text" name="studentName" id="studentName" required>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required>
 
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" required>
+      
       <label for="studentDate">Date of Birth:</label>
       <input type="date" name="studentDate" id="studentDate" required>
 
@@ -185,8 +189,9 @@ PGPC values your privacy and ensures that all personal and sensitive information
       <label for="studentCitizenship">Citizenship:</label>
       <input type="text" name="studentCitizenship" id="studentCitizenship" required>
 
-      <label for="studentNumber">Mobile No.:</label>
-      <input type="tel" name="studentNumber" id="studentNumber" pattern="[0-9]{10,15}" required>
+      <label>Mobile No.:</label>
+      <input type="text" id="studentNumber" name="studentNumber"
+       placeholder="e.g., 09171234567" inputmode="numeric" required>
 
       <label for="studentEmail">Email Address:</label>
       <input type="email" name="studentEmail" id="studentEmail" required>
@@ -206,8 +211,10 @@ PGPC values your privacy and ensures that all personal and sensitive information
 function saveData(event) {
   event.preventDefault(); // Prevents form from submitting immediately
 //para sa consent 
-  const name = document.getElementById('studentName').value;
-  localStorage.setItem('studentName', name);
+  const lastname = document.getElementById('lastName').value;
+  const firstname = document.getElementById('firstName').value; 
+  localStorage.setItem('lastName', lastname);
+  localStorage.setItem('firstName', firstname);
 
   // sa local storage ng browser muna to
   localStorage.setItem('studentCourse', document.getElementById('studentCourse').value);
