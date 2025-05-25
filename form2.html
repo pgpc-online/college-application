@@ -188,7 +188,8 @@
       </div>
     </form>
     <script>
-function saveForm2Data(event) {
+      
+  /* function saveForm2Data(event) {
   event.preventDefault(); // Prevent auto-submit
 
   localStorage.setItem('fatherName', document.getElementById('fatherName').value);
@@ -227,7 +228,24 @@ function saveForm2Data(event) {
 
   // Submit after saving
   document.getElementById("form2").submit();
-}
+}*/
+      function saveForm2Data(event) {
+  event.preventDefault();
+
+  const form = document.getElementById('form2');
+  const formData = new FormData(form);
+
+  const form2Data = {};
+  formData.forEach((value, key) => {
+    form2Data[key] = value;
+  });
+
+  for (const key in form2Data) {
+    localStorage.setItem(key, form2Data[key]);
+  }
+
+  form.submit();
+      }
     </script>
   </div>
 </body>
