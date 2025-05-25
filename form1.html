@@ -208,7 +208,7 @@ PGPC values your privacy and ensures that all personal and sensitive information
   </div>
   <script>
   
-function saveData(event) {
+/*function saveData(event) {
   event.preventDefault(); // Prevents form from submitting immediately
 //para sa consent 
   const lastname = document.getElementById('lastName').value;
@@ -230,7 +230,25 @@ function saveData(event) {
   localStorage.setItem('studentPostal', document.getElementById('studentPostal').value);
 
   document.getElementById("form1").submit(); // Now submit after saving
-}
+}*/
+    function saveData(event) {
+  event.preventDefault();
+
+  const form = document.getElementById('form1');
+  const formData = new FormData(form);
+
+  const form1Data = {};
+  formData.forEach((value, key) => {
+    form1Data[key] = value;
+  });
+
+  // Save each field in localStorage
+  for (const key in form1Data) {
+    localStorage.setItem(key, form1Data[key]);
+  }
+
+  form.submit(); // Submit the form after saving
+    }
   </script>
 </body>
 </html>
