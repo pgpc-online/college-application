@@ -89,6 +89,9 @@ button:hover {
         padding: 20px;
       }
     }
+    input, select {
+  font-size: 16px; /* Prevent iOS zooming issue */
+    }
     .container{
       margin-top: 120px;
       width: 100%;
@@ -142,8 +145,7 @@ PGPC values your privacy and ensures that all personal and sensitive information
     <p><strong>TO THE APPLICANT</strong></p><br>
     <p><strong>PRINT</strong> legibly all information required. Only correctly and completely filled-out form will be accepted for processing</p>
     </div>
-    <form onsubmit="saveData()" action="form2.html">
-      <label for="studentCourse">Program (Course):</label>
+    <form id="form1" onsubmit="return saveData(event)" action="form2.html"> <label for="studentCourse">Program (Course):</label>
       <select name="studentCourse" id="studentCourse" required>
         <option value="" disabled selected>Select Course</option>
         <option>BS Computer Science</option>
@@ -200,13 +202,28 @@ PGPC values your privacy and ensures that all personal and sensitive information
     </form>
   </div>
   <script>
-  function saveData() {
-      const name = document.getElementById('studentName').value;
-     /* const age = document.getElementById('studentAge').value;
-*/
-      localStorage.setItem('studentName', name);
-     /* localStorage.setItem('studentAge', age);*/
-    }
+  
+function saveData(event) {
+  event.preventDefault(); // Prevents form from submitting immediately
+//para sa consent 
+  const name = document.getElementById('studentName').value;
+  localStorage.setItem('studentName', name);
+
+  // sa local storage ng browser muna to
+  localStorage.setItem('studentCourse', document.getElementById('studentCourse').value);
+  localStorage.setItem('studentDate', document.getElementById('studentDate').value);
+  localStorage.setItem('studentBirthPlace', document.getElementById('studentBirthPlace').value);
+  localStorage.setItem('studentSex', document.getElementById('studentSex').value);
+  localStorage.setItem('studentStatus', document.getElementById('studentStatus').value);
+  localStorage.setItem('studentReligion', document.getElementById('studentReligion').value);
+  localStorage.setItem('studentCitizenship', document.getElementById('studentCitizenship').value);
+  localStorage.setItem('studentNumber', document.getElementById('studentNumber').value);
+  localStorage.setItem('studentEmail', document.getElementById('studentEmail').value);
+  localStorage.setItem('studentAddress', document.getElementById('studentAddress').value);
+  localStorage.setItem('studentPostal', document.getElementById('studentPostal').value);
+
+  document.getElementById("form1").submit(); // Now submit after saving
+}
   </script>
 </body>
 </html>
