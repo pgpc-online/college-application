@@ -12,10 +12,20 @@
   </style>
 </head>
 <body>
-
-<h2>Upload Student Requirements</h2>
-
+  
 <form id="uploadForm">
+  
+<h2>Upload Student Requirements</h2>
+<p style="font-size: 16px; color: #555; margin-top: -10px;">
+  Please fill out the form and upload the necessary documents to complete your application.
+</p>
+
+  <ul style="font-size: 15px; color: #555; margin-top: 10px;">
+  <li>* Make sure your 2x2 photo is clear and recent.</li>
+  <li>* PSA Birth Certificate must be official and readable.</li>
+  <li>* Good Moral Certificate is optional but recommended.</li>
+  </ul>
+  
   <label>Full Name:</label>
   <input type="text" id="fullname" required>
 
@@ -32,6 +42,10 @@
   <input type="file" id="goodmoral" accept=".pdf,image/*">
 
   <button type="submit">Submit</button>
+  
+  <div id="uploadingMessage" style="display:none; background: #fff3cd; color: #856404; padding: 15px; border: 1px solid #ffeeba; border-radius: 5px; margin-top: 20px;">
+  Uploading... This may take a few moments. Please wait.
+  </div>
 </form>
 
 <script>
@@ -55,6 +69,8 @@ const firebaseConfig = {
 
   document.getElementById("uploadForm").addEventListener("submit", async function (e) {
   e.preventDefault();
+
+  document.getElementById("uploadingMessage").style.display = "block";
 
   try {
     const name = document.getElementById("fullname").value;
