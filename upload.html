@@ -20,17 +20,17 @@
   Please fill out the form and upload the necessary documents to complete your application.
 </p>
 
-  <ul style="font-size: 15px; color: #555; margin-top: 10px;">
-  <li>* Make sure your 2x2 photo is clear and recent.</li>
-  <li>* PSA Birth Certificate must be official and readable.</li>
-  <li>* Good Moral Certificate is optional but recommended.</li>
+  <ul style="font-size: 15px; color: green; margin-top: 10px;">
+  <li>Make sure your 2x2 photo is clear and recent.</li>
+  <li>PSA Birth Certificate must be official and readable.</li>
+  <li>Good Moral Certificate is optional but recommended.</li>
   </ul>
   
-  <label>Full Name:</label>
+  <!--<label>Full Name:</label>
   <input type="text" id="fullname" required>
 
   <label>Email:</label>
-  <input type="email" id="email" required>
+  <input type="email" id="email" required> -->
 
   <label>2x2 Photo (JPG/PNG):</label>
   <input type="file" id="photo" accept="image/*" required>
@@ -73,8 +73,8 @@ const firebaseConfig = {
   document.getElementById("uploadingMessage").style.display = "block";
 
   try {
-    const name = document.getElementById("fullname").value;
-    const email = document.getElementById("email").value;
+    //const name = document.getElementById("fullname").value;
+    //const email = document.getElementById("email").value;
     const photo = document.getElementById("photo").files[0];
     const psa = document.getElementById("psa").files[0];
     const goodmoral = document.getElementById("goodmoral").files[0];
@@ -93,8 +93,8 @@ const firebaseConfig = {
     }
 
     await db.collection("studentApplications").add({
-      name,
-      email,
+     // name,
+     // email,
       photoURL,
       psaURL,
       goodMoralURL,
