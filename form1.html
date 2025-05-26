@@ -240,15 +240,11 @@ PGPC values your privacy and ensures that all personal and sensitive information
   const form1Data = {};
   formData.forEach((value, key) => {
     form1Data[key] = value;
+    localStorage.setItem(key, value); // Store directly
   });
 
-  // Save each field in localStorage
-  for (const key in form1Data) {
-    localStorage.setItem(key, form1Data[key]);
-  }
-
-  form.submit(); // Submit the form after saving
-    }
+  window.location.href = "form2.html";
+}
   </script>
 </body>
 </html>
