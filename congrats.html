@@ -46,11 +46,14 @@
     <a class="but" href="index.html">Return to Homepage</a>
   </div>
   <script>
-    window.onload = function () {
-    const firstname = localStorage.getItem('firstName');
-  
-    
-    document.getElementById('name').textContent = firstname + '!';
+  window.onload = function () {
+    const firstname = localStorage.getItem('firstName') || '';
+   // const lastname = localStorage.getItem('lastName') || '';
+   // const fullName = firstname + ' ' + lastname;
+
+   document.getElementById('name').textContent = firstName + '!';
+localStorage.removeItem('firstName');
+//localStorage.removeItem('lastName');
   };
   </script>
 </body>
