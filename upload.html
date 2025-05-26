@@ -51,76 +51,70 @@
 </form>
 
 <script>
-  // Paste your Firebase config here
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  // Paste your Firebase config here
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB9oTiiW5iXfiDgcyrEktTBkEh1ZFmZ7Pc",
-  authDomain: "flipbook-a5350.firebaseapp.com",
-  databaseURL: "https://flipbook-a5350-default-rtdb.firebaseio.com",
-  projectId: "flipbook-a5350",
-  storageBucket: "flipbook-a5350.appspot.com",
-  messagingSenderId: "570378601966",
-  appId: "1:570378601966:web:96ebb77badba7e33107aff",
-  measurementId: "G-LCKP7BY0L7"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyB9oTiiW5iXfiDgcyrEktTBkEh1ZFmZ7Pc",
+    authDomain: "flipbook-a5350.firebaseapp.com",
+    databaseURL: "https://flipbook-a5350-default-rtdb.firebaseio.com",
+    projectId: "flipbook-a5350",
+    storageBucket: "flipbook-a5350.appspot.com",
+    messagingSenderId: "570378601966",
+    appId: "1:570378601966:web:96ebb77badba7e33107aff",
+    measurementId: "G-LCKP7BY0L7"
+  };
 
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
   const storage = firebase.storage();
 
   document.getElementById("uploadForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+    e.preventDefault();
+    document.getElementById("uploadingMessage").style.display = "block";
 
-  document.getElementById("uploadingMessage").style.display = "block";
+    try {
+      // 1. Upload files
+      const photo = document.getElementById("photo").files[0];
+      const psa = document.getElementById("psa").files[0];
+      const goodmoral = document.getElementById("goodmoral").files[0];
 
-  try {
-    //const name = document.getElementById("fullname").value;
-    //const email = document.getElementById("email").value;
-    const photo = document.getElementById("photo").files[0];
-    const psa = document.getElementById("psa").files[0];
-    const goodmoral = document.getElementById("goodmoral").files[0];
+      const uploadFile = async (file, folder) => {
+        const ref = storage.ref(`${folder}/${Date.now()}_${file.name}`);
+        await ref.put(file);
+        return await ref.getDownloadURL();
+      };
 
-    const uploadFile = async (file, folder) => {
-      const ref = storage.ref(`${folder}/${Date.now()}_${file.name}`);
-      await ref.put(file);
-      return await ref.getDownloadURL();
-    };
+      const photoURL = await uploadFile(photo, 'photos');
+      const psaURL = await uploadFile(psa, 'psa');
+      const goodMoralURL = goodmoral ? await uploadFile(goodmoral, 'goodmoral') : null;
 
-    const photoURL = await uploadFile(photo, 'photos');
-    const psaURL = await uploadFile(psa, 'psa');
-    let goodMoralURL = null;
-    if (goodmoral) {
-      goodMoralURL = await uploadFile(goodmoral, 'goodmoral');
+      // 2. Collect ALL localStorage values into one object
+      const form1and2Data = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        form1and2Data[key] = localStorage.getItem(key);
+      }
+
+      // 3. Add file URLs and timestamp to the object
+      const completeData = {
+        ...form1and2Data,
+        photoURL,
+        psaURL,
+        goodMoralURL,
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+      };
+
+      // 4. Save everything to Firestore
+      await db.collection("studentApplications").add(completeData);
+
+      alert("All data uploaded successfully!");
+      document.getElementById("uploadForm").reset();
+      localStorage.clear(); // optional: clear storage
+      window.location.href = "congrats.html";
+
+    } catch (error) {
+      console.error("Upload failed:", error);
+      alert("Something went wrong. Please try again.");
     }
-
-    await db.collection("studentApplications").add({
-     // name,
-     // email,
-      photoURL,
-      psaURL,
-      goodMoralURL,
-      submittedAt: firebase.firestore.FieldValue.serverTimestamp()
-    });
-
-    // Optional alert
-    alert("Files uploaded successfully!");
-    
-    // Reset the form
-    document.getElementById("uploadForm").reset();
-    
-    // Redirect
-    window.location.href = "congrats.html";
-
-  } catch (error) {
-    console.error("Upload failed:", error);
-    alert("Oops! Something went wrong during upload. Please try again.");
-  }
-});
-
+  });
 </script>
-
 </body>
 </html>
