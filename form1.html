@@ -233,7 +233,10 @@ PGPC values your privacy and ensures that all personal and sensitive information
 }*/
     function saveData(event) {
   event.preventDefault();
-
+  const firstNameInput = document.getElementById("firstName").value;
+  const lastNameInput = document.getElementById("lastName").value;
+  localStorage.setItem("firstName", firstNameInput);
+  localStorage.setItem("lastName", lastNameInput);
   const form = document.getElementById('form1');
   const formData = new FormData(form);
 
