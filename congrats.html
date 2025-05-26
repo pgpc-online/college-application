@@ -41,19 +41,17 @@
 </head>
 <body>
   <div class="message-box">
-    <h2>Congratulations, <strong id="name"></strong></h1>
-    <p>Your application has been submitted successfully.</p>
+    <h2>Congratulations, <strong id="ngalan"></strong></h1>
+    <p>Sumakses ka. Your application has been submitted successfully.</p>
     <a class="but" href="index.html">Return to Homepage</a>
   </div>
   <script>
   window.onload = function () {
     const firstname = localStorage.getItem('firstName') || '';
-   // const lastname = localStorage.getItem('lastName') || '';
+    //const lastname = localStorage.getItem('lastName') || '';
    // const fullName = firstname + ' ' + lastname;
 
-   document.getElementById('name').textContent = firstName + '!';
-localStorage.removeItem('firstName');
-//localStorage.removeItem('lastName');
+    document.getElementById('ngalan').textContent = firstname;
   };
   </script>
 </body>
