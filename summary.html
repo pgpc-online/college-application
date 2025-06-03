@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+  body{
+    padding: 20px;
+  }
+      @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        background-color: white;
+      }
+
+      .no_print {
+        display: none;
+      }
+
+      iframe {
+        max-width: 100%;
+        height: 1120px;
+        border: none;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--<object data="preview.pdf" type="application/pdf" width="100%" height="600px">
+  <p>Your browser does not support PDFs. <a href="preview.pdf">Download the PDF</a>.</p>
+</object>
+  <iframe src="preview.pdf" width="100%" height="600px"></iframe>
+  
+  -->
+  
+  <iframe src="https://1drv.ms/w/c/e5dd0c7884e7e6b1/IQSDzt6Xmew2Tbf5yC39zl9XAeJl3yMGaIrfo-WVTYFg2jc?em=2" width="900px" height="1250px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+  <div class="no_print">
+    <p>Click the button below to print or save as PDF (fit to A4).</p>
+    <button onclick="window.print()">🖨️ Print / Download as PDF</button>
+  </div>
+</body>
+</html>
