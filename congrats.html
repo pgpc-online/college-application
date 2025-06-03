@@ -47,17 +47,14 @@
     <a class="but" href="summary.html">Preview Application Form</a>
   </div>
   <script>
+    
   window.onload = function () {
-    const studentname = localStorage.getItem('firstName') '';
+    const studentname = localStorage.getItem('firstName');
     //const lastname = localStorage.getItem('lastName') || '';
    // const fullName = firstname + ' ' + lastname;
 
     document.getElementById('student').textContent = studentname;
-    if (firstname) {
-  student.textContent = `${firstname}`;
-} else {
-  student.textContent = ``;
-    }
+  
   };
   </script>
 </body>
