@@ -1,362 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/pgpc.png">
-  <title>PGPC Online Enrollment</title>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Under Maintenance</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'IBM Plex Sans', sans-serif;
-      line-height: 1.6;
-    }
-/*HEADEERRRRRRRRRR*/
-    header {
-      background: #003366;
+      background: linear-gradient(135deg, #1d1f21, #2c3e50);
       color: #fff;
-      padding-left: 10px;
-      padding-right: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      height: 70px;
-      position: fixed;
-      width: 100%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
-      user-select: none;
-    }
-/*NAVIGATIOOOOOOOONONNONNNNNNN*/
-    .navbar {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-contents {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-contents li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      /*transition: background 0.3s ease;*/
-      padding: 8px 12px;
-      /*border-radius: 4px;*/
-    }
-
-    /*.nav-contents li a:hover {
-      background: #f5faff;
-      color: #d4af37;
-    }*/
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #fff;
-      background: none;
-      border: none;
-      margin-left: 1rem;
-    }
-
-    .menu-toggle.open::before {
-      content: "\2715"; /* X */
-    }
-
-    .menu-toggle::before {
-      content: "\2630"; /* ☰ */
-    }
-
-    @media (max-width: 768px) {
-      .nav-contents {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background:#002444;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        z-index: 1000;
-      }
-      .nav-contents.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    /*BANNER DITO--------*/
-    .banner {
-      background: url('images/bg.jpg') center/cover no-repeat;
-      padding: 6rem 2rem;
-      padding-top: 144px;
-      text-align: left;
-      color: white;
-      position: relative;
-      margin-top: 70px;
-      user-select: none;
-      height: 650px;
-      align-items: left;
-    }
-
-    .banner::before {
-      content: "";
-      background: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-    }
-
-    .banner-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .banner h1 {
-      font-size: 48px;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-weight: 900;
-      line-height: 1.1;
-      
-    }
-
-    .banner p {
-      font-size: 1.2rem;
-      margin-bottom: 70px;
-    }
-
-    .cta-button, .start {
-      background: #ffcc00;
-      color: #003366;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 3px;
-    }
-/*SECTIONSSSSSSSSS8*/
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .section::selection {
-      background: #003366;
-      color: #fff;
-    }
-
-    .section h2, .icon {
-      margin-bottom: 1rem;
-      color: #d4af37;
+      height: 100vh;
       text-align: center;
+      padding: 20px;
     }
 
-    .features, .courses {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+    .container {
+      max-width: 600px;
     }
 
-    .feature, .course {
-      flex: 1 1 200px;
-      background: #f5f5f5;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .timeline {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    .timeline li {
-      margin-bottom: 1rem;
-    }
-
-     /*   #faqs {
-      background: #f5faff;
-      padding: 2rem;
-      border-radius: 8px;
-      color:#003366;
-    }
-
-    #faqs h3 {
-      margin-bottom: 0.5rem;
-    
-    }*/
-    #apply{
-       background: #f5faff;
-     }
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    footer a {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
       color: #ffcc00;
-      text-decoration: none;
-      margin: 0 0.5rem;
     }
-    hr{
-      border: none; height: 3px;
-      background-color: #fff;
-    } 
-    .logobox{
-      display: flex; align-items: center; background-color: #003366; padding: 0px;
-    }.logobox img{
-      height: 50px; margin-right: 10px;
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ccc;
     }
-    a{
-      text-decoration: none;
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top: 6px solid #ffcc00;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="logobox">
-  <img class="logo" src="images/pgpc.png" alt="PGPC Logo" >
-  <span style="color: white; font-size: 20px; font-weight: bold;">PGPC</span>
-</div>
- <!-- <div class="logo"><img src="https://i.postimg.cc/N0v2RvSP/PGPC.png" alt="PGPC"></div>
-  <p>PGPC</p>-->
-  <nav class="navbar">
-    <button class="menu-toggle" id="menu-toggle"></button>
-    <ul class="nav-contents" id="nav-contents">
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#courses">Courses Offered</a></li>
-      <li><a href="#apply">How to enroll</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
-<hr>
-<!--BANNERRRRRR-->
-<section class="banner">
-  <div class="banner-content">
-    <h1>Your Future Starts Here.</h1>
-    <p>Be a PGPCian today!</p>
-    <button class="start" onclick="location.href='form1.html'">Start Enrollment</button>
-    <button class="cta-button" onclick="location.href='#courses'">View Courses</button>
+  <div class="container">
+    <h1>We'll Be Back Soon</h1>
+    <p>Our website is currently undergoing a user interface update .<br>Please check back later. -Patrick</p>
+    <div class="spinner"></div>
+    <footer>
+      &copy; 2025 YourWebsiteName. All rights reserved.
+    </footer>
   </div>
-</section>
-<section class="section" id="about">
-  <div class="icon"><img src="images/info.png" width="60" height="auto"></div>
-  <h2>About PGPC</h2>
-  <p style="color:#003366;"><strong>Padre Garcia Polytechnic College (PGPC)</strong> is a premiere higher learning institution located in  Padre Garcia, Batangas. It is committed to providing quality and accessible education to every young Garciano who dreams of a better future. More than just a school, PGPC is the result of the deep and genuine desire of Hon. Mike Rivera to give the youth of Padre Garcia the opportunity to study in an affordable, reliable, and high-quality college within their own hometown.</p>
-  <br>
-  <br>
-     <!-- <div class="icon"><img src="images/blacklogo.png" width="60" height="auto"></div>
-  <h2>Why choose PGPC?</h2>
-  <div class="features">
-    <div class="feature">Free Tuition Fee for the Garcianos</div>
-    <div class="feature">Affordable Tuition Fee for the Non-Garcianos</div>
-    <div class="feature">Air-Conditioned Rooms</div>
-    <div class="feature">Experienced Faculty</div>
-  </div>-->
-</section>
-
-<hr>
-  
-  <section class="section" id="courses">
- <div class="icon"><img src="images/book.png" width="60" height="auto"></div>
-  <h2>Courses Offered</h2>
-  <div class="courses">
-    <div class="course">BS Computer Science</div>
-    <div class="course">BS Management Accounting</div>
-    <div class="course">BS Public Administration</div>
-    <div class="course">BS Criminology</div>
-  </div>
-  </section>
-  
-
-<section class="section" id="apply">
-  <div class="icon"><img src="images/apply.png" width="60" height="auto"></div>
-  <h2>How to Apply</h2>
-  <ul class="timeline">
-    <li>1. Click <a href="form1.html">Start Application".</a></li>
-    <li>2. Fill Out Enrollment Form.</li>
-    <li>3. Upload Required Documents</li>
-    <li>4. Wait for Confirmation</li>
-    <!--<li>5. Proceed to Enrollment</li>-->
-  </ul>
-</section>
-  <!---ALISIN NA TOOOOO
-  <h3 style="margin-left: 20px;">Announcements</h6>
-  
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="YOUR_NONCE">
-</script>
-
-<div class="fb-page" data-href="https://www.facebook.com/PadreGarciaPolytechnicCollege/" data-tabs="timeline" data-width="" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/PadreGarciaPolytechnicCollege/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PadreGarciaPolytechnicCollege/">Padre Garcia Polytechnic College - PGPC</a></blockquote></div>  <!--<section class="section faq" id="faqs">
-  <h2 style="color: #d4af37;">Frequently Asked Questions</h2>
-  <h3>Do I need to create an account?</h3>
-  <p>No. You can start your application right away by clicking "Start Application" button and filling out the form.</p>
-  <h3>What are the requirements?</h3>
-  <p>Form 138, PSA Birth Certificate, Good Moral, and 2x2 picture.</p>
-  <h3>How much is the tuition?</h3>
-  <p>PGPC offers affordable and flexible tuition payment options.</p>
-</section>-->
-
-<section class="section" id="contact">
-      <div class="icon"><img src="images/call.png" width="60" height="auto"></div>
-  <h2>Contact Us</h2>
-  <p><strong>Email:</strong></p>
-  
-  <a href="mailto:padregarciapolytechniccollege@gmail.com">padregarciapolytechniccollege@gmail.com</a>
-  
-  <p><strong>Phone:</strong></p>
-  <a href="tel:(043) 233-2025">(043) 233-2025</a>
-  <p><strong>Facebook:</strong></p>
-  <a href="https://m.facebook.com/PadreGarciaPolytechnicCollege/" target="_blank">
-  Visit Padre Garcia Polytechnic College on Facebook
-</a>
-  <br>
-  <p><strong>Map:</strong></p>
-<a href="https://www.google.com/maps/place/V7M8%2B4JC+Padre+Garcia+Polytechnic+College,+Padre+Garcia,+Batangas/@13.8828094,121.2665155,17z" target="_blank">
-    View Padre Garcia Polytechnic College on Google Maps
-</a>
-</section>
-
-<footer>
-  <div class="icon"><img src="images/whitelogo.png" width="70" height="auto"></div>
-  <h4 style="margin-bottom: 20px;">"TAGA PGPC AKO: MATALINO, DISIPLINADO, MABUTING TAO, IPINAGMAMALAKI KO"</h4>
-  <p>&copy; 2025 Padre Garcia Polytechnic College |
-    <a href="#">Privacy Policy</a> |
-    <a href="#">Terms of Service</a>
-  </p>
-</footer>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navContents = document.getElementById('nav-contents');
-
-  menuToggle.addEventListener('click', () => {
-    navContents.classList.toggle('show');
-    menuToggle.classList.toggle('open');
-  });
-</script>
-
 </body>
 </html>
